@@ -23,7 +23,7 @@ import java.util.Scanner;
             System.out.println("The sum of the numbers is " + sum);
             System.out.println("The product of the numbers is " + product);
             System.out.println("The average of the numbers is " + average);
-
+            scanner.close();
         }
     }
 
