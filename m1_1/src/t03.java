@@ -14,6 +14,8 @@ import java.util.Scanner;
             System.out.println("Give the third number:");
             double third = Double.parseDouble(scanner.nextLine());
 
+            //If you parse input as integers, average count will be wrong
+            // because it doesnt count numbers after "."
             double sum = first + second + third;
             double product = first*second*third;
             double average = (first+second+third) / 3;
