@@ -34,7 +34,7 @@ public class t03 {
 
 
 
-
+      scanner.close();
     }
 }
 //Task 3: Obsolete measures
