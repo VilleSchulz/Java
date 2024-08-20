@@ -8,6 +8,6 @@ public class t02 {
         double secondSide = Double.parseDouble(scanner.nextLine());
         double hypotenusa = Math.sqrt(Math.pow(firstSide,2) + Math.pow(secondSide,2));
         System.out.printf("Lenght of the hypotenusa is %.2f", hypotenusa);
-
+        scanner.close();
     }
 }
