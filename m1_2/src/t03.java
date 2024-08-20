@@ -32,8 +32,6 @@ public class t03 {
       System.out.printf("Your given weight %d grams is %d leiviskä, %d naula, %.2f luoti",
               givenWeight,leiviskät,naulat,luodit);
 
-
-
       scanner.close();
     }
 }
