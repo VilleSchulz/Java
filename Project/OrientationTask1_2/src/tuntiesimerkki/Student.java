@@ -3,11 +3,12 @@ package tuntiesimerkki;
 public class Student implements Comparable<Student> {
     private int age;
     private String name;
-
+    private Yearcourse yearCourse;
 
     Student(String newName, int newAge) {
         name = newName;
         age = newAge;
+        yearCourse = Yearcourse.FIRST;
     }
 
 
@@ -18,7 +19,9 @@ public class Student implements Comparable<Student> {
     public int getAge() {
         return age;
     }
-
+public Yearcourse getYearCourse() {
+        return yearCourse;
+}
     @Override
     public int compareTo(Student o) {
         //Sort by first letter

@@ -19,7 +19,7 @@ public class Main {
         for(int i = 0; i < list.size(); i++){
             Student s = list.poll();
             while (s != null){
-                System.out.println("Student: "+ s.getName()+ " age "+ s.getAge());
+                System.out.println("Student: "+ s.getName()+ " age "+ s.getAge()+  " Yearcourse: "+ s.getYearCourse());
                 s=list.poll();
             }
 
