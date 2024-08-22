@@ -16,6 +16,8 @@ public class Customer_t3 {
         setId(counter);
         counter++;
         System.out.println("Customer " + getId() + " created");
+        setStartTime();
+
     }
     public void setId(int newId){
         if (newId >= 1) {
@@ -36,16 +38,10 @@ public class Customer_t3 {
     public void setStartTime(){
         startTime = System.currentTimeMillis();
     }
-    public void setEndTIme(){
-        endTime = System.currentTimeMillis();
-    }
-    public void getStartTime(){
-        return startTime;
-    }
-    public void getEndTime(){
-        return endTime;
-    }
     public void getTimeSpent(){
-        return (endTime-startTime);
+        endTime = System.currentTimeMillis();
+        long timeSpent = endTime-startTime;
+        System.out.println("Time spent " + timeSpent + " ms");
     }
+
 }
