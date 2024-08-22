@@ -32,7 +32,7 @@ public class t03 {
             }
         }
         for (int i = number[0]; i <= number[1]; i++) {
-            var isPrime = true;
+            boolean isPrime = true;
             if (i == 2) { //number 2 is prime
                 isPrime = true;
             } else if (i % 2 == 0) { //even numbers exept 2 is not prime
