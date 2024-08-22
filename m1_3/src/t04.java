@@ -39,8 +39,9 @@ public class t04 {
                     System.out.println("Congratulations! You got " + pointCounter + " points! Test passed!");
 
                 }
-                else if (!end){
+                else{
                     System.out.println("You got " + pointCounter + " points! Test Failed:(!");
+                    System.out.println("Start again!!!");
                     pointCounter = 0;
                 }
 
