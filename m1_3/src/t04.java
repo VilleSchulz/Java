@@ -20,7 +20,7 @@ public class t04 {
         Scanner in = new Scanner(System.in);
         int pointCounter = 0;
         Random rand = new Random();
-        var end = false;
+        boolean end = false;
         while (!end) {
             for (int i = 0; i < 10; i++) {
                 int num1 = rand.nextInt(10) + 1;
