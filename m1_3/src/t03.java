@@ -17,10 +17,9 @@ public class t03 {
 
         for (int i = 0; i < 2; i++) {
             String numberLocation;
-            if (i == 0){
+            if (i == 0) {
                 numberLocation = "Start";
-            }
-            else{
+            } else {
                 numberLocation = "End";
             }
 
@@ -32,12 +31,24 @@ public class t03 {
                 i--;
             }
         }
-
         for (int i = number[0]; i <= number[1]; i++) {
-            for (int i = 3; i <= Math.sqrt(n); i += 2)            if (! i%2 == 0 || i
-                System.out.println("Integer " + i);
-            }
+            var isPrime = true;
+            if (i == 2) { //number 2 is prime
+                isPrime = true;
+            } else if (i % 2 == 0) { //even numbers exept 2 is not prime
+                isPrime = false;
+            } else {
+                for (int j = 3; j <= Math.sqrt(i); j += 2) {
+                    if (i % j == 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
 
+            }
+            if (isPrime) {
+                System.out.println("Integer " + i + " is prime");
+            }
         }
 
 
