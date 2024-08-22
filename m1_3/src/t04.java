@@ -28,24 +28,22 @@ public class t04 {
                 int product = num1 * num2;
                 System.out.print("Give the answer for " + num1 + "*" + num2 + ": ");
                 int answer = Integer.parseInt(in.nextLine());
-                if (answer == product || answer == 122) {
+                if (answer == product) {
                     pointCounter++;
                     if (pointCounter == 10) {
                         end = true;
                     }
-
-
                 }
-
+            }
                 if (end){
                     System.out.println("Congratulations! You got " + pointCounter + " points! Test passed!");
 
                 }
-                else{
+                else if (!end){
                     System.out.println("You got " + pointCounter + " points! Test Failed:(!");
                     pointCounter = 0;
                 }
-            }
+
 
 
         }
