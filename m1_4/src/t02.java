@@ -23,12 +23,15 @@ public class t02 {
             array[i][0] = Integer.parseInt(in.nextLine());
         }
         double sum = Double.NEGATIVE_INFINITY;
-        String biggestSum = new String();
+        String biggestSum = "";
         for (int i = 0; i < arraySize; i++) {
             for (int j = 0; j < array.length; j++) {
-                if (sum < array[i][0] + array[j][0]) {
-                    sum = array[i][0] + array[j][0];
-                    biggestSum = array[i][0] + " + " + array[j][0] + " = " + sum;
+                int firstNumber = array[i][0];
+                int secondNumber = array[j][0];
+                //check sums and make sure that sum of same index wont be count
+                if (sum < firstNumber + secondNumber && i!=j) {
+                    sum = firstNumber + secondNumber;
+                    biggestSum = firstNumber + " + " + secondNumber + " = " + sum;
                 }
 
             }
