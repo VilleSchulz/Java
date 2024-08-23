@@ -40,5 +40,6 @@ public class t02 {
         }
         System.out.println("Biggest sum of two integers: " + biggestSum);
         System.out.println("Between indexes " + sumIndexes);
+        in.close();
     }
 }
