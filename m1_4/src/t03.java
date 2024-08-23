@@ -12,16 +12,53 @@
 import java.util.Scanner;
 
 public class t03 {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.print("Give the width of the array: ");
-        int arraySizeWidth = Integer.parseInt(in.nextLine());
-        System.out.print("Give the height of the array: ");
-        int arraySizeHeight = Integer.parseInt(in.nextLine());
-        int[][] array = new int[arraySizeHeight][arraySizeWidth];
-       /* for (int i = 0; i < arraySize; i++) {
+        System.out.print("Give the size of the array: ");
+        int arraySize = Integer.parseInt(in.nextLine());
+        int[] array1 = new int[arraySize];
+        int[] array2 = new int[arraySize];
+        for (int i = 0; i < arraySize; i++) {
             System.out.print("Give " + (i + 1) + " integer:");
-            array[i][0] = Integer.parseInt(in.nextLine());*/
+            array1[i] = Integer.parseInt(in.nextLine());
+        }
+        boolean dublicate =  false;
+        int indexCount = 0;
+        for (int array1Int : array1) {
+            for (int array2Int: array2) {
+                if (array1Int == array2Int) {
+                    dublicate = true;
+                    break;
+                } else {
+                    dublicate = false;
+
+                }
+
+            }
+            if (!dublicate) {
+                array2[indexCount] = array1Int;
+                indexCount ++;
+            }
+
         }
 
+
+        for (int j = 0; j < 2; j++) {
+            for (int k = 0; k < arraySize; k++) {
+                if (j == 0) {
+                    System.out.println("Array 1 num: " + array1[k]);
+                    if(k== arraySize-1){
+                        System.out.println("--------------");
+                    }
+                } else {
+                    System.out.println("Array 2 num: " + array2[k]);
+                }
+
+
+            }
+
+
+        }
     }
+}
+
