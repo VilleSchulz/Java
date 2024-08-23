@@ -17,22 +17,22 @@ import java.util.Random;
 
 
 public class t01 {
-    public static void main (String[] args){
+    public static void main(String[] args) {
         Random rand = new Random();
-        Scanner in = new Scanner (System.in);
-        String [] firstNames = {"Jari","Petteri","Kari","Siru","Henna","Mari","Mira","Sanna"};
-        String [] lastNames  = {"Kulttinen","Könttinen","Ripatti","Rapatti","Suilo","Kananen"};
+        Scanner in = new Scanner(System.in);
+        String[] firstNames = {"Jari", "Petteri", "Kari", "Siru", "Henna", "Mari", "Mira", "Sanna"};
+        String[] lastNames = {"Kulttinen", "Könttinen", "Ripatti", "Rapatti", "Suilo", "Kananen"};
 
         System.out.print("Give number of names to generate: ");
         int amount = Integer.parseInt(in.nextLine());
-        for(int i = 0; i <  amount; i++){
-            String name = firstNames[rand.nextInt(firstNames.length-1)] + " " +
-                    lastNames[rand.nextInt(lastNames.length-1)];
+        for (int i = 0; i < amount; i++) {
+            String name = firstNames[rand.nextInt(firstNames.length - 1)] + " " +
+                    lastNames[rand.nextInt(lastNames.length - 1)];
             System.out.println(name);
         }
 
 
-
+        in.close();
 
     }
 }
