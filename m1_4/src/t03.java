@@ -61,6 +61,7 @@ public class t03 {
 
 
             }
+            in.close();
 
 
         }
