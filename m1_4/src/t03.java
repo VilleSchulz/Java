@@ -18,13 +18,17 @@ public class t03 {
         int arraySize = Integer.parseInt(in.nextLine());
         int[] array1 = new int[arraySize];
         int[] array2 = new int[arraySize];
+       // Ask array size
         for (int i = 0; i < arraySize; i++) {
             System.out.print("Give " + (i + 1) + " integer:");
             array1[i] = Integer.parseInt(in.nextLine());
         }
+        //sett default check values
         boolean dublicate =  false;
         int indexCount = 0;
+
         for (int array1Int : array1) {
+            //check if number alleady in list 2
             for (int array2Int: array2) {
                 if (array1Int == array2Int) {
                     dublicate = true;
@@ -35,6 +39,7 @@ public class t03 {
                 }
 
             }
+            //if number not in list add
             if (!dublicate) {
                 array2[indexCount] = array1Int;
                 indexCount ++;
