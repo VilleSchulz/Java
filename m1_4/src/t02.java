@@ -19,24 +19,26 @@ public class t02 {
         int arraySize = Integer.parseInt(in.nextLine());
         int[][] array = new int[arraySize][1];
         for (int i = 0; i < arraySize; i++) {
-            System.out.print("Give " + (i + 1) + " integer:");
+            System.out.print("Give " + (i + 1) + ". integer:");
             array[i][0] = Integer.parseInt(in.nextLine());
         }
-        double sum = Double.NEGATIVE_INFINITY;
-        String biggestSum = "";
+        double biggestSum = Double.NEGATIVE_INFINITY;
+        String sumIndexes = "";
         for (int i = 0; i < arraySize; i++) {
             for (int j = 0; j < array.length; j++) {
                 int firstNumber = array[i][0];
                 int secondNumber = array[j][0];
                 //check sums and make sure that sum of same index wont be count
-                if (sum < firstNumber + secondNumber && i!=j) {
-                    sum = firstNumber + secondNumber;
-                    biggestSum = firstNumber + " + " + secondNumber + " = " + sum;
+                if (biggestSum < firstNumber + secondNumber && i!=j) {
+                    biggestSum = firstNumber + secondNumber;
+
+                    sumIndexes ="index: "+i+ " and "+j;
                 }
 
             }
 
         }
-        System.out.print("Biggest sum of two integers: " + biggestSum);
+        System.out.println("Biggest sum of two integers: " + biggestSum);
+        System.out.println("Between indexes " + sumIndexes);
     }
 }
