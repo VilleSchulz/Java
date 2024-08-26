@@ -5,17 +5,16 @@
 // behave like TV channel switch, i.e., they can only be changed when the device is on, and the device remembers the
 // selections even when it is switched off.
 
-import org.w3c.dom.ls.LSOutput;
+
 
 import java.util.Scanner;
-import java.util.Timer;
-import java.util.TimerTask;
+
+
 
 public class CoffeeMaker_t03 {
     public static void main(String[] args) {
 
         //set utilities
-        Timer timer = new Timer();
         Scanner in = new Scanner(System.in);
 
         class CoffeeMachine {

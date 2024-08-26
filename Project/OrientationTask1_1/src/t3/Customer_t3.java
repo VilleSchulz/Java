@@ -10,38 +10,43 @@ package t3;
 public class Customer_t3 {
     private static int counter = 1;
     private int id;
-    private long startTime;
-    private long endTime;
-    public Customer_t3(){
+    private static long startTime;
+    private static long endTime;
+
+    public Customer_t3() {
         setId(counter);
         counter++;
         System.out.println("Customer " + getId() + " created");
         setStartTime();
 
     }
-    public void setId(int newId){
+
+    public void setId(int newId) {
         if (newId >= 1) {
             id = newId;
-        }
-        else {
+        } else {
             System.out.println("Id invalid, must be greater than 0");
         }
 
 
-
     }
-    public int getId(){
+
+    public static int getId() {
 
         return id;
     }
 
-    public void setStartTime(){
+    public void setStartTime() {
         startTime = System.currentTimeMillis();
     }
-    public void getTimeSpent(){
+
+    public static String getTimeSpent() {
+        String rtn;
         endTime = System.currentTimeMillis();
-        long timeSpent = endTime-startTime;
-        System.out.println("Time spent " + timeSpent + " ms");
+        long timeSpent = endTime - startTime;
+        rtn = "Time spent " + timeSpent + " ms";
+
+        return rtn;
     }
 
 }
