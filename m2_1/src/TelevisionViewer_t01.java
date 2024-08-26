@@ -2,22 +2,39 @@
 //Implement class Television that together with TelevisionViewer
 // produces the following output:
 
-public class t01{
-    public static void main(String[] args){
 
-        
-    }
-    
-}
-
-public class Television{
-
-}
-
-
-
-public class TelevisionViewer {
+public class TelevisionViewer_t01 {
     public static void main(String[] args) {
+        class Television {
+            private int channel;
+            private boolean isOn = false;
+
+            public boolean isOn() {
+                return isOn;
+
+            }
+
+            public void pressOnOff() {
+                isOn = !isOn;
+
+
+            }
+
+            public void setChannel(int channel) {
+                if (channel == 11){
+                    channel = 1;
+                }
+                this.channel = channel;
+
+            }
+
+            public int getChannel() {
+                return channel;
+            }
+
+        }
+
+
         Television myTV = new Television();
         myTV.setChannel(1);
 
