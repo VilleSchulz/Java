@@ -21,7 +21,7 @@ public class TelevisionViewer_t01 {
             }
 
             public void setChannel(int channel) {
-                if (channel == 11){
+                if (channel == 11) {
                     channel = 1;
                 }
                 this.channel = channel;
