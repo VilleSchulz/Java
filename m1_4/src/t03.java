@@ -18,53 +18,48 @@ public class t03 {
         int arraySize = Integer.parseInt(in.nextLine());
         int[] array1 = new int[arraySize];
         int[] array2 = new int[arraySize];
-       // Ask array size
+        // Ask array size
         for (int i = 0; i < arraySize; i++) {
             System.out.print("Give " + (i + 1) + " integer:");
             array1[i] = Integer.parseInt(in.nextLine());
         }
-        //sett default check values
-        boolean dublicate =  false;
+        //set default check values
+        boolean dublicate = false;
         int indexCount = 0;
-
-        for (int array1Int : array1) {
-            //check if number alleady in list 2
-            for (int array2Int: array2) {
-                if (array1Int == array2Int) {
+        boolean zeroFound = false;
+        for (int array1Int : array1) { //loops trought given numbers
+            for (int array2Int : array2) {//check if number alleady in list 2
+                if (array1Int == array2Int && array1Int != 0 || zeroFound && array1Int == 0) {
                     dublicate = true;
                     break;
                 } else {
+                    if (array1Int == 0) {
+                        zeroFound = true;
+                        array2[indexCount] = array1Int;// special case for 0
+                        indexCount++;
+                    }
                     dublicate = false;
-
                 }
-
             }
-            //if number not in list add
+            //if number not in a list add
             if (!dublicate) {
                 array2[indexCount] = array1Int;
-                indexCount ++;
+                indexCount++;
             }
 
         }
 
 
-        for (int j = 0; j < 2; j++) {
-            for (int k = 0; k < arraySize; k++) {
-                if (j == 0) {
-                    System.out.println("Array 1 num: " + array1[k]);
-                    if(k== arraySize-1){
-                        System.out.println("--------------");
-                    }
-                } else {
-                    System.out.println("Array 2 num: " + array2[k]);
-                }
-
-
-            }
-            in.close();
-
-
+        for (int array1Int : array1) {
+            System.out.println("Array 1 num: " + array1Int);
         }
+        System.out.println("--------------");
+        for (int i = 0; i < indexCount; i++) {
+            System.out.println("Array 2 num: " + array2[i]);
+        }
+
+
+        in.close();
     }
 }
 
