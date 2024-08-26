@@ -8,9 +8,9 @@ public class CarDriver_t02 {
 
             private double speed;
             private double gasolineLevel;
-            private String typeName;
-            private int topSpeed;
-            private int tankSize;
+            private final String typeName;
+            private final int topSpeed;
+            private final int tankSize;
 
             public Car(String typeName,int topSpeed,int tankSize) {
                 speed = 0; gasolineLevel = 0;
