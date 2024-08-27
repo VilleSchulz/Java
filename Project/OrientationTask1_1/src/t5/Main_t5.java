@@ -19,4 +19,8 @@
 package t5;
 
 public class Main_t5 {
+    public static void main(String[] args){
+
+
+    }
 }

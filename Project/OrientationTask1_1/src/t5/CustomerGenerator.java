@@ -1,4 +1,6 @@
 package t5;
 
-public class CustomerGenerator {
+public void CustomerGenerator() {
+    System.out.println();
+
 }
