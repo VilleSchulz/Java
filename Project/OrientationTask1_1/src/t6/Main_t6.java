@@ -4,7 +4,6 @@
 package t6;
 
 import java.util.Scanner;
-import static t6.ServicePoint.totalServiceTime;
 public class Main_t6 {
     public static boolean testFlag = true;// test flag => true for testing simulation multiple times
     public static int simulationAmmount;
