@@ -1,3 +1,11 @@
+//(P) Write a program in which you create customers implemented in the previous task and queue and dequeue them
+// by a user (make a simple text-based interface that asks the user to take action). Use the LinkedList class as the
+// queue, using the FIFO principle (first in first out, the longest in the list gets out first: addFirst and removeLast
+// methods of the LinkedList class). Write a test program and print the time spent in the queue by each removed client.
+// To measure the time, you can use the System.nanotime() method.
+
+
+
 package t4;
 
 public class Customer_t4 {

@@ -17,7 +17,7 @@ public class t4 {
         Scanner in = new Scanner(System.in);
         String command;
         do {
-            System.out.println("Paina 1) luodaksesi olion jonoon. Paina 2) hakeaksesi ");
+            System.out.println("Press 1) to add customer to queue. Press 2) to remowe from queue ");
             command = in.nextLine();
             if (command.equals("1")) {
                 Customer_t4 newCustomer = new Customer_t4();
@@ -39,27 +39,3 @@ public class t4 {
     }
 }
 
-/*
-* package t3;
-
-import java.util.LinkedList;
-import java.util.Scanner;
-
-public class Main_t3 {
-    Scanner in = new Scanner(System.in);
-    LinkedList<Customer_t3> queue =  new LinkedList<>();
-    do
-
-    {
-        System.out.println("Do you want to create new customer? Y/N");
-        String choice = in.nextLine();
-
-        if (choice.equalsIgnoreCase("Y")) {
-            Customer_t3 customer = new Customer_t3();
-            queue.addFirst(customer);
-        }
-    }while;
-
-
-}
-*/
