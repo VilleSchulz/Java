@@ -9,9 +9,8 @@ package t3;
 
 public class Customer_t3 {
     private static int counter = 1;
-    private int id;
+    private  int id;
     private static long startTime;
-    private static long endTime;
 
     public Customer_t3() {
         setId(counter);
@@ -31,7 +30,7 @@ public class Customer_t3 {
 
     }
 
-    public static int getId() {
+    public  int getId() {
 
         return id;
     }
@@ -40,9 +39,9 @@ public class Customer_t3 {
         startTime = System.currentTimeMillis();
     }
 
-    public static String getTimeSpent() {
+    public  String getTimeSpent() {
         String rtn;
-        endTime = System.currentTimeMillis();
+        long endTime = System.currentTimeMillis();
         long timeSpent = endTime - startTime;
         rtn = "Time spent " + timeSpent + " ms";
 

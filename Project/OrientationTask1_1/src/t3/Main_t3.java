@@ -6,23 +6,22 @@ public class Main_t3 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        while (true) {
-            String press;
-            System.out.println("Press enter to create new customer or press write exit to continue to next step");
+        String press =".";
+        while (!press.isEmpty()) {
+            System.out.println("Press enter to create two new customer");
             press = in.nextLine();
-            if (press.equals("")) {
-                String customerName = customer+ Customer_t3.
-                Customer_t3 customer = new Customer_t3();
-            } else if (press.equals("exit")) {
-                break;
-            }
         }
 
-        String press2;
-        System.out.println("Press something to remove customer");
-        press2 = in.nextLine();
+        Customer_t3 customer1 = new Customer_t3();
+        Customer_t3 customer2 = new Customer_t3();
 
-        Customer_t3.customer.getTimeSpent();
+
+
+        System.out.println("Press something to remove customer");
+        in.nextLine();
+
+        System.out.println("Customer "+customer1.getId()+" "+customer1.getTimeSpent());
+        System.out.println("Customer "+customer2.getId()+" "+customer2.getTimeSpent());
 
 
     }
