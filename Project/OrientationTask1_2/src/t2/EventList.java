@@ -1,4 +1,4 @@
-package t1;
+package t2;
 import java.util.PriorityQueue;
 public class EventList {
     private static PriorityQueue<Event> eventQueue= new PriorityQueue<>();

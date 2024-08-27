@@ -8,7 +8,7 @@
 // Java's for-iteration does not print the contents of the PriorityQueueue in any particular order, but you have to
 // find a way other than for-iteration.
 
-package t1;
+package t2;
 
 public class Main_t1 {
     public static void main(String[] args){
