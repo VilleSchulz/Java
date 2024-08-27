@@ -10,13 +10,13 @@
 
 package t2;
 
-public class Main_t1 {
+public class Main_t2 {
     public static void main(String[] args){
         EventList eventList = new EventList();
 
-        Event event1 = new Event(3,"C",eventList);
-        Event event2 = new Event(5,"B",eventList);
-        Event event3 = new Event(9,"A",eventList);
+        Event event1 = new Event(6,"C",eventList);
+        Event event2 = new Event(2,"B",eventList);
+        Event event3 = new Event(1,"A",eventList);
 
     eventList.printEventList();//print evenlist in priority order
     }
