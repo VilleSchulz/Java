@@ -1,6 +1,6 @@
 //(P) Program a single point of service system where the customer moves through the system:
-//Define a ServicePoint class, associated with a queue (LinkedList), that picks customers from t
-// he queue (by the queue's normal order) and serves them one by one.
+//Define a ServicePoint class, associated with a queue (LinkedList), that picks customers from the queue
+// (by the queue's normal order) and serves them one by one.
 //To implement the queue, use the Java LinkedList class as in the previous task. Define the
 // methods void addToQueueue(Customer a) and Customer removeFromQueueue() in the ServicePoint class.
 //Define also a method called serve() for the ServicePoint class that picks all the clients by turns from the queue
@@ -18,5 +18,5 @@
 
 package t5;
 
-public class t4 {
+public class Main_t5 {
 }
