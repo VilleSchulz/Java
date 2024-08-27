@@ -19,7 +19,15 @@
 package t5;
 
 public class Main_t5 {
-    public static void main(String[] args){
+    public static void main(String[] args) throws InterruptedException {
+        ServicePoint servicePoint = new ServicePoint();
+
+        CustomerGenerator.generateCustomers(servicePoint);
+        servicePoint.Serve();
+
+
+
+
 
 
     }
