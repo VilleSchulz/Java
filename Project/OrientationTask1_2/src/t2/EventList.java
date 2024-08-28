@@ -9,7 +9,7 @@ public class EventList {
     public void printEventList(){
     while(!eventQueue.isEmpty()){
         Event event = eventQueue.poll();// poll events from Priority Queue
-        System.out.println("event: "+ event.getEventType()+"  event time: "+event.getEventTime());
+        System.out.println("event: "+ event.getEventType()+"  event time: "+event.getEventTime() + " min");
     }
     }
 }
