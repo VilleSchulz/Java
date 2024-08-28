@@ -1,11 +1,10 @@
 package tuntiesimerkki;
 
 public class Ihminen {
-    private String nimi;
-    private int pisteet;
-    private int ikä;
+    public String nimi;
+    public int ikä;
 
-    public Ihminen() {
+    public Ihminen(String nimi) {
         this.nimi = nimi;
         this.ikä = 0;
     }
@@ -21,5 +20,8 @@ public class Ihminen {
 
     public int ikä() {
         return ikä;
+    }
+    public String toString() {
+        return nimi+ " "+ ikä;
     }
 }
