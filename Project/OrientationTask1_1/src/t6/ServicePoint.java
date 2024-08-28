@@ -25,10 +25,7 @@ public class ServicePoint {
         while (!queue.isEmpty()) {
 
 
-            if (Main_t6.testFlag) {
 
-
-            }
             int customerId = queue.getLast().getId();
             long waitTime = queue.getLast().getTimeSpent() / 10;
             double serviceTime = Math.random() * 1000;
