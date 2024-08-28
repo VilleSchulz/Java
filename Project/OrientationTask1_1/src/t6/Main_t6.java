@@ -5,7 +5,7 @@ package t6;
 
 import java.util.Scanner;
 public class Main_t6 {
-    public static boolean testFlag = true;// test flag => true for testing simulation multiple times
+    public static boolean testFlag = false;// test flag => true for testing simulation multiple times
     public static int simulationAmmount;
     public static void main(String[] args) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
@@ -16,15 +16,12 @@ public class Main_t6 {
             //***************test program begins***************************
             System.out.println("How many time you want to run simulation");
             simulationAmmount = Integer.parseInt(scanner.nextLine());
-            CustomerGenerator.generateCustomers(servicePoint);
-            servicePoint.Serve();
             //*****************test program ends*****************
 
-        } else {
-            //main program starts here***
-            CustomerGenerator.generateCustomers(servicePoint);
-            servicePoint.Serve();
         }
+            //main program starts here***
+        CustomerGenerator.generateCustomers(servicePoint);
+        servicePoint.Serve();
 
 
     }
