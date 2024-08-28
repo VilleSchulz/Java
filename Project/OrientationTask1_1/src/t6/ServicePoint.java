@@ -23,9 +23,6 @@ public class ServicePoint {
     public void Serve() throws InterruptedException {
 
         while (!queue.isEmpty()) {
-
-
-
             int customerId = queue.getLast().getId();
             long waitTime = queue.getLast().getTimeSpent() / 10;
             double serviceTime = Math.random() * 1000;
@@ -44,9 +41,7 @@ public class ServicePoint {
 
         }
         System.out.println("No more customers");
-        if( Main_t6.testFlag) {
-            System.out.println("Average serve time is " + totalServiceTime / counter +"s");
-        }
+        System.out.println("Average serve time is " + totalServiceTime / counter + "s");
 
 
     }

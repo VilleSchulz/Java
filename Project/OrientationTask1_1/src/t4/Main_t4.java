@@ -13,7 +13,7 @@ import java.util.LinkedList;
 public class Main_t4 {
     public static void main(String[] args) {
         LinkedList<Customer_t4> queue = new LinkedList<>();
-        System.out.println("T4 Main alkaa");
+        System.out.println("T4 Main starts");
         Scanner in = new Scanner(System.in);
         String command;
         do {
