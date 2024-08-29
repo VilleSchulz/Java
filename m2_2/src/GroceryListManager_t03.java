@@ -1,19 +1,21 @@
-////Task 2: Total Cost Calculation
-////Modify the GroceryListManager class to store both the item name and its corresponding cost as a pair
-//// (e.g., using a HashMap<String, Double>). Add the following methods:
-////addItem(String item, double cost): This method should add the given item and its cost to the grocery list.
-////calculateTotalCost(): This method should calculate and return the total cost of all items in the grocery list.
+//Task 3: Categorizing Items
+//Enhance the GroceryListManager class to support categorizing items. Each item should belong to a
+// category (e.g., "Fruits", "Dairy", "Bakery"). Add the following methods:
+//addItem(String item, double cost, String category): This method should add the given item to the
+// grocery list along with its category.
+//displayByCategory(String category): This method should display all items in the specified category.
 
-
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class GroceryListManager_t03 {
 
-    private HashMap<String, Double> groceryList = new HashMap<>();
+    private ArrayList<String> groceryList = new ArrayList<>();
 
-    public void addItem(String item, double cost) {
-        groceryList.put(item, cost);
+    public void addItem(String item, double price, String category) {
+        groceryItem item_ = new groceryItem(item, price, category);
+
     }
 
     public void removeItem(String item) {
@@ -60,12 +62,27 @@ public class GroceryListManager_t03 {
         return total;
     }
 
+    public static class groceryItem {
+        public static double price;
+        public static String category;
+        public static String itemName;
+
+        public groceryItem(String item, double price, String category) {
+            itemName = item;
+            groceryItem.price = price;
+            groceryItem.category = category;
+
+
+        }
+
+    }
+
 
     public static void main_() {
         GroceryListManager_t03 groceryListManager = new GroceryListManager_t03();
-        groceryListManager.addItem("Apple", 0.99);
-        groceryListManager.addItem("Milk", 0.88);
-        groceryListManager.addItem("Beer", 5);
+        groceryListManager.addItem("Apple", 0.99, "Fruit");
+        groceryListManager.addItem("Milk", 0.88, "Drink");
+        groceryListManager.addItem("Beer", 5, "Alcohol");
         System.out.println(groceryListManager.checkItem("Milk"));
 
         System.out.println(groceryListManager.calculateTotalCost());
@@ -73,7 +90,6 @@ public class GroceryListManager_t03 {
         groceryListManager.removeItem("Apple");
         System.out.println(groceryListManager.checkItem("Apple"));
         System.out.println(groceryListManager.calculateTotalCost());
-
 
 
     }
