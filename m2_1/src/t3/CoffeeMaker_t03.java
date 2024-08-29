@@ -11,7 +11,7 @@ public class CoffeeMaker_t03 {
 
     public boolean isOn = false;
     public boolean heatOn = false;
-    public int coffeeType = 0 ;
+    public int coffeeType = 0;
     public int coffeeAmmount = 0;
     public boolean startMenu = false;
     public boolean brewMenu = false;
@@ -33,6 +33,8 @@ public class CoffeeMaker_t03 {
     }
 
     public String getCoffeeType() {
+
+
         String rtn = "";
         switch (coffeeType) {
             case 0:
@@ -50,6 +52,18 @@ public class CoffeeMaker_t03 {
 
 
         return rtn;
+
+          /*
+        Toinen tapa:
+        String rtn = switch (coffeeType) {
+            case 0 -> "Coffee type set to none";
+            case 1 -> "Coffee type set to Normal";
+            case 2 -> "Coffee type set to Espresso";
+            default -> "";
+        };
+
+
+        return rtn;*/
     }
 
 
@@ -60,8 +74,9 @@ public class CoffeeMaker_t03 {
     }
 
     public String getCoffeeAmount() {
-        String rtn = "Coffee ammount set to " + this.coffeeAmmount + "ml\n";
-        return rtn;
+
+
+        return "Coffee ammount set to " + this.coffeeAmmount + "ml\n";
 
     }
 
