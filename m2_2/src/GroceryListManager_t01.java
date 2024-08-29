@@ -37,7 +37,7 @@ public class GroceryListManager_t01 {
         System.out.print("Is "+item+" in grocery list? ");
         return groceryList.contains(item);
     }
-    public static void main() {
+    public static void main_() {
         GroceryListManager_t01 groceryListManager = new GroceryListManager_t01();
         groceryListManager.addItem("Apple");
         groceryListManager.addItem("Milk");
@@ -56,7 +56,7 @@ public class GroceryListManager_t01 {
 
     }
         public static void main(String[] args){
-            GroceryListManager_t01.main();
+            GroceryListManager_t01.main_();
 
         }
 
