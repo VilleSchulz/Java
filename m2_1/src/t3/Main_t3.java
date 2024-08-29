@@ -21,12 +21,15 @@ public class Main_t3 {
 
             while (coffeeMachine.isOn) {
                 while (coffeeMachine.startMenu) {
+
                     System.out.println("************************START MENU*********************************" +
                             "\nPress 1) to select coffee type, press 2) to select coffee amount");
+
                     System.out.println("press 3) to go brew menu " + "press 4) to turn the coffee machine off");
-                    String answer = in.nextLine();
+                    int answer = Integer.parseInt(in.nextLine());
+
                     switch (answer) {
-                        case "1"://select coffeetype
+                        case 1://select coffeetype
                             System.out.println("************************COFFEE TYPE*********************************" +
                                     "\nSelect between coffee type, press 1) => normal, press 2) => espresso");
                             int coffeeType = Integer.parseInt(in.nextLine());
@@ -40,7 +43,7 @@ public class Main_t3 {
                             }
                             break;
 
-                        case "2"://select coffee ammount
+                        case 2://select coffee ammount
                             System.out.println("**********COFFEE AMMOUNT*************"
                                     + "\nselect coffee amount between 10-80ml");
                             int coffeeAmmount = Integer.parseInt(in.nextLine());
@@ -51,26 +54,23 @@ public class Main_t3 {
                                     coffeeAmmount = Integer.parseInt(in.nextLine());
                                 } else {
                                     break;
-
                                 }
-
                             }
                             coffeeMachine.setCoffeeAmount(coffeeAmmount);
                             break;
 
-                        case "3":
-                            if (CoffeeMaker_t03.coffeeType == 0 || CoffeeMaker_t03.coffeeAmmount == 0) {
-                                System.out.println("!!!!Select both coffee type and ammount before brewing!!!!\n"+
-                                        coffeeMachine.getCoffeeAmount()+coffeeMachine.getCoffeeType());//if coffee ammount and type not set go back to start menu
-
+                        case 3:
+                            if (coffeeMachine.coffeeType == 0 || coffeeMachine.coffeeAmmount == 0) {
+                                System.out.println(coffeeMachine.getCoffeeAmount() + coffeeMachine.getCoffeeType() +
+                                        "`\n!!!!Select both coffee type and ammount before brewing!!!!"
+                                );//if coffee ammount and type not set go back to start menu
                             } else {
                                 coffeeMachine.brewMenu = true; //go to brew menu
                                 coffeeMachine.startMenu = false;
                             }
                             break;
 
-
-                        case "4"://turn off coffee machine
+                        case 4://turn off coffee machine
                             coffeeMachine.turnOnOff();
                             coffeeMachine.startMenu = false;
                             break;
@@ -85,14 +85,14 @@ public class Main_t3 {
                         System.out.println("\n************************BREW MENU*********************************\n" +
                                 coffeeMachine.getCoffeeType() + " and " + coffeeMachine.getCoffeeAmount()
                                 + "\nPress 1) to start brewing, press 2 to go back to start menu");
-                        answer = in.nextLine();
+                        answer = Integer.parseInt(in.nextLine());
                         switch (answer) {
-                            case "1":
+                            case 1:
                                 coffeeMachine.brewMenu = false;
                                 coffeeMachine.startMenu = true;
                                 coffeeMachine.brewCoffee();
                                 break;
-                            case "2":
+                            case 2:
                                 coffeeMachine.brewMenu = false;
                                 coffeeMachine.startMenu = true;
                                 break;

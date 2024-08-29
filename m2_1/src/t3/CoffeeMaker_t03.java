@@ -6,79 +6,74 @@ package t3;//Task 3: Create CoffeeMaker class
 // selections even when it is switched off.
 
 
-
-import java.util.Scanner;
-
-
-
 public class CoffeeMaker_t03 {
 
 
     public boolean isOn = false;
     public boolean heatOn = false;
-   public static int coffeeType = 0;
-    public static int coffeeAmmount = 0;
+    public int coffeeType = 0 ;
+    public int coffeeAmmount = 0;
     public boolean startMenu = false;
     public boolean brewMenu = false;
 
+    public void turnOnOff() {
+        isOn = !isOn;
+        if (isOn) {
+            System.out.println("Coffee machine is on!");
+        } else {
+            System.out.println("Coffee machine is off!");
+        }
 
+    }
 
+    public void setCoffeeType(int coffeeType) {
+        this.coffeeType = coffeeType;
+        System.out.println(getCoffeeType());
 
+    }
 
+    public String getCoffeeType() {
+        String rtn = "";
+        switch (coffeeType) {
+            case 0:
+                rtn = "Coffee type set to none";
+                break;
+            case 1:
+                rtn = "Coffee type set to Normal";
+                break;
 
-
-
-            public void turnOnOff() {
-                isOn = !isOn;
-                if (isOn) {
-                    System.out.println("Coffee machine is on!");
-                } else {
-                    System.out.println("Coffee machine is off!");
-                }
-
-            }
-
-            public void setCoffeeType(int coffeeType) {
-                this.coffeeType = coffeeType;
-                System.out.println(getCoffeeType());
-
-            }
-
-            public String getCoffeeType() {
-                String rtn;
-                if (this.coffeeType == 1) {
-                    rtn = "Coffee type set to Normal";
-                } else {
-                    rtn = "Coffee type set to Espresso";
-                }
-
-                return rtn;
-            }
-
-
-            public int setCoffeeAmount(int coffeeAmmount) {
-                this.coffeeAmmount = coffeeAmmount;
-                System.out.println(getCoffeeAmount());
-                return coffeeAmmount;
-            }
-
-            public String getCoffeeAmount() {
-                String rtn= "Coffee ammount set to " + this.coffeeAmmount + "ml\n";
-                return rtn;
-
-            }
-
-            public boolean brewCoffee() {
-                if (isOn) {
-                    heatOn = true;//starts heating coffee (brewing)
-                    System.out.println("Brewing coffee.");//
-                    System.out.println("Coffee ready!!");
-                }
-
-
-
-                return true;
-            }
+            case 2:
+                rtn = "Coffee type set to Espresso";
+                break;
 
         }
+
+
+        return rtn;
+    }
+
+
+    public int setCoffeeAmount(int coffeeAmmount) {
+        this.coffeeAmmount = coffeeAmmount;
+        System.out.println(getCoffeeAmount());
+        return coffeeAmmount;
+    }
+
+    public String getCoffeeAmount() {
+        String rtn = "Coffee ammount set to " + this.coffeeAmmount + "ml\n";
+        return rtn;
+
+    }
+
+    public boolean brewCoffee() {
+        if (isOn) {
+            heatOn = true;//starts heating coffee (brewing)
+            System.out.println("Brewing coffee.");//
+            System.out.println("Coffee ready!!");
+        }
+
+        return true;
+    }
+
+}
 
