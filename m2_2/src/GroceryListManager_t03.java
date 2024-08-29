@@ -8,7 +8,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class GroceryListManager_t02 {
+public class GroceryListManager_t03 {
 
     private HashMap<String, Double> groceryList = new HashMap<>();
 
