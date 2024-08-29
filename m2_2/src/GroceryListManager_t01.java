@@ -34,10 +34,6 @@ public class GroceryListManager_t01 {
     }
     public boolean checkItem(String item) {
         System.out.print("Is "+item+" in grocery list? ");
-        if (groceryList.contains(item)) {
-            return true;
-        } else {
-            return false;
-        }
+        return groceryList.contains(item);
     }
 }
