@@ -14,6 +14,7 @@ public class GroceryListManager_t03 {
     public void addItem(String item, double price, String category) {
         GroceryItem item_ = new GroceryItem(item, price, category);
         groceryList3.add(item_);
+        System.out.println(item+" added");
 
     }
 
@@ -27,10 +28,10 @@ public class GroceryListManager_t03 {
             System.out.println("List is empty");
         } else {
             System.out.println("Items in list:");
-            for (GroceryItem item : groceryList3) {
-                double price_ = GroceryItem.price;
-                String category_ = GroceryItem.category;
-                String itemName = GroceryItem.itemName;
+            for (GroceryItem groceryItem : groceryList3) {
+                double price_ = groceryItem.price;
+                String category_ = groceryItem.category;
+                String itemName = groceryItem.itemName;
 
                 System.out.println(category_+ ": " +itemName + " price: " + price_);
             }
@@ -42,7 +43,7 @@ public class GroceryListManager_t03 {
 
     public boolean checkItem(String item) {
         for (int i = 0; i <groceryList3.size(); i++){
-            String itemName =
+            //String itemName =
 
 
         }
@@ -75,13 +76,13 @@ public class GroceryListManager_t03 {
         groceryListManager.addItem("Apple", 0.99, "Fruit");
         groceryListManager.addItem("Milk", 0.88, "Drink");
         groceryListManager.addItem("Beer", 5, "Alcohol");
-        System.out.println(groceryListManager.checkItem("Milk"));
+       // System.out.println(groceryListManager.checkItem("Milk"));
 
         System.out.println(groceryListManager.calculateTotalCost());
 
-        groceryListManager.removeItem("Apple");
-        System.out.println(groceryListManager.checkItem("Apple"));
-        System.out.println(groceryListManager.calculateTotalCost());
+        //groceryListManager.removeItem("Apple");
+       // System.out.println(groceryListManager.checkItem("Apple"));
+        //System.out.println(groceryListManager.calculateTotalCost());
 
 
     }
