@@ -62,7 +62,7 @@ public class GroceryListManager_t02 {
 
 
     public static void main_() {
-        GroceryListManager_t03 groceryListManager = new GroceryListManager_t03();
+        GroceryListManager_t02 groceryListManager = new GroceryListManager_t02();
         groceryListManager.addItem("Apple", 0.99);
         groceryListManager.addItem("Milk", 0.88);
         groceryListManager.addItem("Beer", 5);
@@ -79,7 +79,7 @@ public class GroceryListManager_t02 {
     }
 
     public static void main(String[] args) {
-        GroceryListManager_t03.main_();
+        GroceryListManager_t02.main_();
 
     }
 

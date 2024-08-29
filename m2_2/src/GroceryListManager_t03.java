@@ -6,76 +6,68 @@
 //displayByCategory(String category): This method should display all items in the specified category.
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class GroceryListManager_t03 {
 
-    private ArrayList<String> groceryList = new ArrayList<>();
+    private final ArrayList<GroceryItem> groceryList3 = new ArrayList<>();
 
     public void addItem(String item, double price, String category) {
-        groceryItem item_ = new groceryItem(item, price, category);
+        GroceryItem item_ = new GroceryItem(item, price, category);
+        groceryList3.add(item_);
 
     }
 
     public void removeItem(String item) {
         System.out.println("Removing " + item);
-        groceryList.remove(item);
+        groceryList3.remove(item);
     }
 
     public void displayList() {
-        if (groceryList.isEmpty()) {
+        if (groceryList3.isEmpty()) {
             System.out.println("List is empty");
         } else {
             System.out.println("Items in list:");
-            int index = 1;
-            for (Map.Entry<String, Double> entry : groceryList.entrySet()) {
-                String item = entry.getKey();
-                double price = entry.getValue();
-                System.out.println(index + 1 + ": " + item + " price: " + price);
-                index++;
+            for (GroceryItem item : groceryList3) {
+                double price_ = GroceryItem.price;
+                String category_ = GroceryItem.category;
+                String itemName = GroceryItem.itemName;
+
+                System.out.println(category_+ ": " +itemName + " price: " + price_);
             }
         }
 
 
     }
 
+
     public boolean checkItem(String item) {
+        for (int i = 0; i <groceryList3.size(); i++){
+            String itemName =
+
+
+        }
         System.out.print("Is " + item + " in grocery list? ");
-        return groceryList.containsKey(item);
+        return true;//groceryList.containsKey(item);
     }
 
     public double calculateTotalCost() {
         double total = 0;
-        if (groceryList.isEmpty()) {
+        if (groceryList3.isEmpty()) {
             System.out.println("List is empty");
         } else {
             displayList();
             System.out.println("Calculating  groceries total cost");
 
-            for (double cost : groceryList.values()) {
+           /* for (double cost : groceryList.values()) {
                 total += cost;
 
 
-            }
+            }*/
         }
         return total;
     }
 
-    public static class groceryItem {
-        public static double price;
-        public static String category;
-        public static String itemName;
 
-        public groceryItem(String item, double price, String category) {
-            itemName = item;
-            groceryItem.price = price;
-            groceryItem.category = category;
-
-
-        }
-
-    }
 
 
     public static void main_() {
