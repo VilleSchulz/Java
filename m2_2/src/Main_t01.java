@@ -37,24 +37,3 @@
 //Note: You are encouraged to enhance the exercise by adding input validation and error handling to handle cases such as adding duplicate items, removing non-existent items, and so on.
 
 
-public class Main_t01 {
-    public static void main(String[] args) {
-        GroceryListManager_t01 groceryListManager = new GroceryListManager_t01();
-        groceryListManager.addItem("Apple");
-        groceryListManager.addItem("Milk");
-        groceryListManager.addItem("Beer");
-        System.out.println(groceryListManager.checkItem("Milk"));
-
-        groceryListManager.removeItem("Apple");
-        groceryListManager.displayList();
-
-        groceryListManager.removeItem("Milk");
-
-        groceryListManager.displayList();
-
-        groceryListManager.removeItem("Beer");
-        groceryListManager.displayList();
-
-
-    }
-}

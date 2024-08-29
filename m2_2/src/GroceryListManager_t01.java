@@ -9,6 +9,7 @@
 import java.util.ArrayList;
 
 public class GroceryListManager_t01 {
+
     private ArrayList<String> groceryList = new ArrayList<>();
 
 
@@ -36,4 +37,30 @@ public class GroceryListManager_t01 {
         System.out.print("Is "+item+" in grocery list? ");
         return groceryList.contains(item);
     }
+    public static void main() {
+        GroceryListManager_t01 groceryListManager = new GroceryListManager_t01();
+        groceryListManager.addItem("Apple");
+        groceryListManager.addItem("Milk");
+        groceryListManager.addItem("Beer");
+        System.out.println(groceryListManager.checkItem("Milk"));
+
+        groceryListManager.removeItem("Apple");
+        groceryListManager.displayList();
+
+        groceryListManager.removeItem("Milk");
+
+        groceryListManager.displayList();
+
+        groceryListManager.removeItem("Beer");
+        groceryListManager.displayList();
+
+    }
+        public static void main(String[] args){
+            GroceryListManager_t01.main();
+
+        }
+
+
+
 }
+
