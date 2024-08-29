@@ -1,4 +1,10 @@
+//
+
+
+
 public class CarDriver_t02 {
+
+
 
     public static void main(String[] args) {
 
@@ -26,7 +32,7 @@ public class CarDriver_t02 {
                 else
                     speed = 0;
             }
-            void decelerate(int amount) {
+            void deaccelerate(int amount) {
                 if (gasolineLevel > 0) {
                     if (amount > 0)
                         speed = Math.max(0, speed - amount);
@@ -58,7 +64,7 @@ public class CarDriver_t02 {
         }
 
         while (myCar.getSpeed() > 0) {
-            myCar.decelerate(15);
+            myCar.deaccelerate(15);
             System.out.println(myCar.getTypeName() + ": speed is " + myCar.getSpeed() + " km/h");
         }
     }

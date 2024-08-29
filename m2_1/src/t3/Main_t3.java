@@ -1,86 +1,12 @@
-//Task 3: Create CoffeeMaker class
-//
-//A coffee maker has a selector for coffee type (normal/espresso) and a selector for coffee amount (10–80 ml).
-// It also has an of/off switch that behaves in the same way as TV of/off switch. Coffee type and amount selectors
-// behave like TV channel switch, i.e., they can only be changed when the device is on, and the device remembers the
-// selections even when it is switched off.
-
-
+package t3;
 
 import java.util.Scanner;
 
-
-
-public class CoffeeMaker_t03 {
+public class Main_t3 {
     public static void main(String[] args) {
-
-        //set utilities
         Scanner in = new Scanner(System.in);
+        CoffeeMaker_t03 coffeeMachine = new CoffeeMaker_t03();
 
-        class CoffeeMachine {
-            private boolean isOn = false;
-            private boolean heatOn = false;
-            private int coffeeType;
-            private int coffeeAmmount = 0;
-            public boolean startMenu = false;
-            public boolean brewMenu = false;
-
-
-            public void turnOnOff() {
-                isOn = !isOn;
-                if (isOn) {
-                    System.out.println("Coffee machine is on!");
-                } else {
-                    System.out.println("Coffee machine is off!");
-                }
-
-            }
-
-            public void setCoffeeType(int coffeeType) {
-                this.coffeeType = coffeeType;
-                System.out.println(getCoffeeType());
-
-            }
-
-            public String getCoffeeType() {
-                String rtn;
-                if (this.coffeeType == 1) {
-                    rtn = "Coffee type set to Normal";
-                } else {
-                    rtn = "Coffee type set to Espresso";
-                }
-
-                return rtn;
-            }
-
-
-            public int setCoffeeAmount(int coffeeAmmount) {
-                this.coffeeAmmount = coffeeAmmount;
-                System.out.println(getCoffeeAmount());
-                return coffeeAmmount;
-            }
-
-            public String getCoffeeAmount() {
-                String rtn= "Coffee ammount set to " + this.coffeeAmmount + "ml\n";
-                return rtn;
-
-            }
-
-            public boolean brewCoffee() {
-                if (isOn) {
-                    heatOn = true;//starts heating coffee (brewing)
-                    System.out.println("Brewing coffee.");//
-                    System.out.println("Coffee ready!!");
-                }
-
-
-
-                return true;
-            }
-
-        }
-
-        CoffeeMachine coffeeMachine = new CoffeeMachine();// init machine
 
         while (true) {
             while (!coffeeMachine.isOn) {
@@ -133,11 +59,20 @@ public class CoffeeMaker_t03 {
                             break;
 
                         case "3":
-                            coffeeMachine.brewMenu = true;
-                            coffeeMachine.startMenu = false; //go to brew menu
+                            if (CoffeeMaker_t03.coffeeType == 0 || CoffeeMaker_t03.coffeeAmmount == 0) {
+                                System.out.println("!!!!Select both coffee type and ammount before brewing!!!!\n"+
+                                        coffeeMachine.getCoffeeAmount()+coffeeMachine.getCoffeeType());//if coffee ammount and type not set go back to start menu
+
+                            } else {
+                                coffeeMachine.brewMenu = true; //go to brew menu
+                                coffeeMachine.startMenu = false;
+                            }
                             break;
+
+
                         case "4"://turn off coffee machine
                             coffeeMachine.turnOnOff();
+                            coffeeMachine.startMenu = false;
                             break;
 
 
@@ -146,6 +81,7 @@ public class CoffeeMaker_t03 {
 
 
                     while (coffeeMachine.brewMenu) {
+
                         System.out.println("\n************************BREW MENU*********************************\n" +
                                 coffeeMachine.getCoffeeType() + " and " + coffeeMachine.getCoffeeAmount()
                                 + "\nPress 1) to start brewing, press 2 to go back to start menu");
@@ -169,7 +105,4 @@ public class CoffeeMaker_t03 {
             }
         }
     }
-
-
 }
-
