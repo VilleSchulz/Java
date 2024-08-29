@@ -1,4 +1,3 @@
-package t3;//Task 3: Create CoffeeMaker class
 //
 //A coffee maker has a selector for coffee type (normal/espresso) and a selector for coffee amount (10–80 ml).
 // It also has an of/off switch that behaves in the same way as TV of/off switch. Coffee type and amount selectors
