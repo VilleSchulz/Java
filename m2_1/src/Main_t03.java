@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main_t3 {
+public class Main_t03 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         CoffeeMaker_t03 coffeeMachine = new CoffeeMaker_t03();
