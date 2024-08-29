@@ -17,6 +17,7 @@ public class GroceryListManager_t01 {
     }
 
     public void removeItem(String item) {
+        System.out.println("Removing "+ item);
         groceryList.remove(item);
     }
 
@@ -26,9 +27,17 @@ public class GroceryListManager_t01 {
         } else {
             System.out.println("Items in list:");
             for (int i = 0; i < groceryList.size(); i++) {
-                System.out.println(i+1 + ": " + groceryList.get(i));
+                System.out.println(i + 1 + ": " + groceryList.get(i));
             }
         }
 
+    }
+    public boolean checkItem(String item) {
+        System.out.print("Is "+item+" in grocery list? ");
+        if (groceryList.contains(item)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
