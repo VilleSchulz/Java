@@ -4,7 +4,7 @@
 ////addItem(String item, double cost): This method should add the given item and its cost to the grocery list.
 ////calculateTotalCost(): This method should calculate and return the total cost of all items in the grocery list.
 
-import java.util.ArrayList;
+
 import java.util.HashMap;
 import java.util.Map;
 
