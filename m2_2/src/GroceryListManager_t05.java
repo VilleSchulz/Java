@@ -7,7 +7,7 @@
 import java.util.ArrayList;
 
 public class GroceryListManager_t05 {
-    public static final ArrayList<ShoppingList> shoppingLists = new ArrayList<>();
+    private static final ArrayList<ShoppingList> shoppingLists = new ArrayList<>();
     private final ArrayList<GroceryItem_t05> groceryList5 = new ArrayList<>();
    // private final ArrayList<ShoppingList> shoppingListCatalog = new ArrayList<>();
     public void addItem(String item, double price, String category, int quantity) {
@@ -32,6 +32,11 @@ public class GroceryListManager_t05 {
         }
         ;
 
+    }
+    public static void addShoppingList(ShoppingList item) {
+
+        shoppingLists.add(item);
+        System.out.println(item.getTitle()+" added");
     }
 
     public String displayAvailableItems() {
