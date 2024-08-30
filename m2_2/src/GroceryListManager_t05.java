@@ -30,7 +30,7 @@ public class GroceryListManager_t05 {
             }
 
         }
-        ;
+
 
     }
     public static void addShoppingList(ShoppingList item) {
@@ -103,7 +103,7 @@ public class GroceryListManager_t05 {
     public void calculateTotalCost() {
         System.out.println("Calculating groceries total cost\n" +
                 "**********************************");
-        System.out.println("Total cost: " + displayList() + "");//diplaylist returns total price.
+        System.out.println("Total cost: " + displayList());//diplaylist returns total price.
         //total cost prints it
         System.out.println("**********************************");
 
