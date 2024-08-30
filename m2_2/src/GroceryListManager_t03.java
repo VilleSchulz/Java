@@ -9,10 +9,10 @@ import java.util.ArrayList;
 
 public class GroceryListManager_t03 {
 
-    private final ArrayList<GroceryItem> groceryList3 = new ArrayList<>();
+    private final ArrayList<GroceryItem_t03> groceryList3 = new ArrayList<>();
 
     public void addItem(String item, double price, String category) {
-        GroceryItem item_ = new GroceryItem(item, price, category);
+        GroceryItem_t03 item_ = new GroceryItem_t03(item, price, category);
         groceryList3.add(item_);
         System.out.println(item + " added");
 
@@ -23,6 +23,7 @@ public class GroceryListManager_t03 {
             if (groceryList3.get(i).getItemName().equals(item)) {
                 groceryList3.remove(i);
                 System.out.println("Removing " + item);
+                i--;// if i-- not added it wont  delete next item if same name
             }
         }
     }
@@ -33,10 +34,10 @@ public class GroceryListManager_t03 {
             System.out.println("List is empty");
         } else {
             System.out.println("Items in list:");
-            for (GroceryItem groceryItem : groceryList3) {
-                double price_ = groceryItem.getPrice();
-                String category_ = groceryItem.getCategory();
-                String itemName = groceryItem.getItemName();
+            for (GroceryItem_t03 groceryItemT03 : groceryList3) {
+                double price_ = groceryItemT03.getPrice();
+                String category_ = groceryItemT03.getCategory();
+                String itemName = groceryItemT03.getItemName();
                 totalPrice += price_;
                 System.out.println(category_ + ": " + itemName + " price: " + price_);
             }
@@ -50,8 +51,8 @@ public class GroceryListManager_t03 {
         boolean found = false;
         System.out.print("Is " + item + " in grocery list? ");
 
-        for (GroceryItem groceryItem : groceryList3) {
-            if (groceryItem.getItemName().equals(item)) {
+        for (GroceryItem_t03 groceryItemT03 : groceryList3) {
+            if (groceryItemT03.getItemName().equals(item)) {
                 found = true;
             }
         }
@@ -68,9 +69,9 @@ public class GroceryListManager_t03 {
     public String displayByCategory(String category) {
         StringBuilder rtn = new StringBuilder();
         System.out.println("Items in " + category + ":");
-        for (GroceryItem groceryItem : groceryList3) {
-            if (groceryItem.getCategory().equals(category)) {
-                String item = groceryItem.getItemName() + " " + "price: " + groceryItem.getPrice() + "\n";
+        for (GroceryItem_t03 groceryItemT03 : groceryList3) {
+            if (groceryItemT03.getCategory().equals(category)) {
+                String item = groceryItemT03.getItemName() + " " + "price: " + groceryItemT03.getPrice() + "\n";
                 rtn.append(item);
             }
         }

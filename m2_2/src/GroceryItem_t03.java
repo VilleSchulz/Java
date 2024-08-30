@@ -1,9 +1,9 @@
-public class GroceryItem {
+public class GroceryItem_t03 {
     private final double price;
     private final String category;
     private final String itemName;
 
-    public GroceryItem(String item, double price, String category) {
+    public GroceryItem_t03(String item, double price, String category) {
         itemName = item;
         this.price = price;
         this.category = category;
