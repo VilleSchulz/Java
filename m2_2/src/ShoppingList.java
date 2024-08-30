@@ -9,7 +9,7 @@ public class ShoppingList {
 
     public ShoppingList(String title) {
         this.title = title;
-        GroceryListManager_t05.addShoppingList(this);
+        GroceryListManager_t05.addShoppingList(this);//added shopping list to list
     }
 
 
