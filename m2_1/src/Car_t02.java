@@ -45,7 +45,7 @@ public class Car_t02 {
     }
 
     void fillTank() {
-        gasolineLevel = 100;
+        gasolineLevel = tankSize;
     }
 
     double getGasolineLevel() {
