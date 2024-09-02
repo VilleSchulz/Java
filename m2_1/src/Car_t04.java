@@ -21,10 +21,14 @@ public class Car_t04 {
 
 
     public void accelerate() {
-        if (gasolineLevel > 0)
+        if (gasolineLevel > 0) {
             speed += 10;
-        else
+            if (speed >= topSpeed) {
+                speed = topSpeed;
+            }
+        } else {
             speed = 0;
+        }
     }
 
     void deaccelerate(int amount) {
@@ -41,7 +45,7 @@ public class Car_t04 {
                 System.out.println("Target speed: " + "(" + targetSpeed + ")" +
                         " must be set between 20 and 150");
             } else {
-                System.out.println("Target speed set: " + "(" + targetSpeed + "km/h"+")");
+                System.out.println("Target speed set: " + "(" + targetSpeed + "km/h" + ")");
                 speed = targetSpeed;
             }
 
