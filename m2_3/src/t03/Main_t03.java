@@ -1,6 +1,6 @@
 package t03;
 
-public class Main_t02 {
+public class Main_t03 {
     public static void main(String[] args){
         Library lib = new Library();
         Book Book1 = new Book("Kauna","Jari",1998);
@@ -20,7 +20,7 @@ public class Main_t02 {
         System.out.println(lib.isBookAvailable("Kauna2"));
         lib.returnBook("Kauna2");
         System.out.println(lib.isBookAvailable("Kauna2"));
-        ;lib.displayBooks();
+        lib.displayBooks();
 
     }
 }
