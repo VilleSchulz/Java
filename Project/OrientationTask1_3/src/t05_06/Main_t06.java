@@ -2,7 +2,7 @@ package t05_06;
 
 
 
-public class Main_t05 {
+public class Main_t06 {
     public static void main(String[] args) {
         Clock clock = Clock.getInstance();
         System.out.println(clock.getTime());
@@ -13,7 +13,7 @@ public class Main_t05 {
 
         eventList.printEventList();//print evenlist in priority order
         ArrivalProcess arrivalProcess = new ArrivalProcess();
-        arrivalProcess.addEvent();
+        //arrivalProcess.addEvent();
         eventList.printEventList();
 
 
