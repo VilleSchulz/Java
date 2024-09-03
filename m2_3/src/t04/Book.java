@@ -3,9 +3,9 @@ package t04;
 import java.util.HashMap;
 
 public class Book {
-    private String title;
-    private String author;
-    private int publicationYear;
+    private final String title;
+    private final String author;
+    private final int publicationYear;
     private String review;
     private Double rating;
 
