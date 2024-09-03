@@ -1,10 +1,10 @@
-package t3;
+package t05_06;
 
 
 import java.util.PriorityQueue;
 
 public class EventList {
-    public static PriorityQueue<Event> eventQueue= new PriorityQueue<>();
+    static PriorityQueue<Event> eventQueue= new PriorityQueue<>();
     public static void addToEventList(Event event){
         eventQueue.add(event);
 
