@@ -7,7 +7,7 @@ public class SuperCar extends Car_t01 {
     public SuperCar(String typeName, int topSpeed, int tankSize) {
         super(typeName);
         super(topSpeed);
-        tankSize = tankSize;
+        super(tankSize);
 
     }
 
