@@ -1,23 +1,20 @@
-package t04;
+package t03;
 
 public class Shape {
     public double height;
-    String color;
 
     double area;
     public double radius;
     public double width;
 
-    public Shape(double height, double width,String color) {
+    public Shape(double height, double width) {
         this.height = height;
         this.width = width;
-        this.color = color;
 
     }
 
-    public Shape(double radius,String color) {
+    public Shape(double radius) {
         this.radius = radius;
-        this.color = color;
     }
 
 

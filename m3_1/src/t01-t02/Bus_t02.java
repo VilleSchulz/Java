@@ -1,10 +1,10 @@
 package t01;
 
-public class Bus_t03 extends t01.Car_t01 {
+public class Bus_t02 extends t01.Car_t01 {
     private int passengers;
     private int capacity;
 
-    public Bus_t03(String typeName, int topSpeed, int tankSize, int capacity) {
+    public Bus_t02(String typeName, int topSpeed, int tankSize, int capacity) {
        super(typeName,topSpeed,tankSize);
         this.capacity = capacity;
     }

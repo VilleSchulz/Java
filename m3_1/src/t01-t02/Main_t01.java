@@ -3,11 +3,11 @@ package t01;
 public class Main_t01 {
     public static void main(String[] args) {
         t01.Car_t01 myCar;
-        t01.SuperCar_t02 mySuperCarT02;
-        t01.Bus_t03 myBusT03;
+        t01.SuperCar_t01 mySuperCarT02;
+        t01.Bus_t02 myBusT03;
         myCar = new t01.Car_t01("Toyota Corolla", 200, 100);
-        mySuperCarT02 = new t01.SuperCar_t02("Toyota Corolla-S", 400, 200);
-        myBusT03 = new t01.Bus_t03("Volvo",80,500,50);
+        mySuperCarT02 = new t01.SuperCar_t01("Toyota Corolla-S", 400, 200);
+        myBusT03 = new t01.Bus_t02("Volvo",80,500,50);
         myBusT03.accelerate();
         myCar.fillTank();
         mySuperCarT02.fillTank();

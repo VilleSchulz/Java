@@ -3,8 +3,8 @@
 // (and higher gasoline consumption) than an ordinary Car.
 package t01;
 
-public class SuperCar_t02 extends t01.Car_t01 {
-    public SuperCar_t02(String typeName, int topSpeed, int tankSize) {
+public class SuperCar_t01 extends t01.Car_t01 {
+    public SuperCar_t01(String typeName, int topSpeed, int tankSize) {
         super(typeName,topSpeed,tankSize);
 
 
