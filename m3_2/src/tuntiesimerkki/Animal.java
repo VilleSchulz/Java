@@ -9,7 +9,19 @@ public interface Animal {
 
 class Koeluokka{
     public static void main(String[] args){
-       Koira koira = new Koira();
+    /*   tämä vain kertakäyttöiseen luontiin
+    ********************************
+    Animal animal = new Animal() {
+           public void eat() {
+
+           }
+           public void sleep() {
+
+           }
+    **********************************
+       }*/
+
+        Koira koira = new Koira();
        koira.eat();
        koira.sleep();
 

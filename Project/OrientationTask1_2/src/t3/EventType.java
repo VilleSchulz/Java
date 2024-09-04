@@ -1,4 +1,5 @@
 package t3;
 
-public enum EventType {ARRIVAL,EXIT
+public enum EventType {
+    ARRIVAL, FINNIST, START
 }
