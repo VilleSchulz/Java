@@ -3,11 +3,10 @@
 // (and higher gasoline consumption) than an ordinary Car.
 package t01;
 
-public class SuperCar extends Car_t01 {
-    public SuperCar(String typeName, int topSpeed, int tankSize) {
-        super(typeName);
-        super(topSpeed);
-        super(tankSize);
+public class SuperCar_t02 extends t01.Car_t01 {
+    public SuperCar_t02(String typeName, int topSpeed, int tankSize) {
+        super(typeName,topSpeed,tankSize);
+
 
     }
 
@@ -16,20 +15,16 @@ public class SuperCar extends Car_t01 {
             speed += 20;
             if (speed >= topSpeed) {
                 speed = topSpeed;
-                this.gasolineLevel-=5;
-                if (gasolineLevel <= 0) {
-                    gasolineLevel = 0;
-                }
+                this.gasolineLevel=Math.max(0, this.gasolineLevel-5);
             }
         } else {
             speed = 0;
         }
     }
 
-    void deaccelerate(int amount) {
+    void deaccelerate() {
         if (gasolineLevel > 0) {
-            if (amount > 0)
-                speed = Math.max(0, speed - amount);
+                speed = Math.max(0, speed - 20);
         } else
             speed = 0;
     }

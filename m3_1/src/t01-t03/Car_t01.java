@@ -25,16 +25,16 @@ public class Car_t01 {
             speed += 10;
             if (speed >= topSpeed) {
                 speed = topSpeed;
+                this.gasolineLevel=Math.max(0, this.gasolineLevel-1);
             }
         } else {
             speed = 0;
         }
     }
 
-    void deaccelerate(int amount) {
+    void deaccelerate() {
         if (gasolineLevel > 0) {
-            if (amount > 0)
-                speed = Math.max(0, speed - amount);
+                speed = Math.max(0, speed - 10);
         } else
             speed = 0;
     }
