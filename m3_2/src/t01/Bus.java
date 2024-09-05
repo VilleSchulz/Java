@@ -1,34 +1,36 @@
 package t01;
 
 public class Bus implements Vehicle {
-    private final String typeName;
-    private int passengers;
-    private int capacity;
-    private int topSpeed;
-    private int tankSize;
+    private String typeName;
+    private String color;
+    private String fuelType;
 
-    public Bus(String typeName, int topSpeed, int tankSize, int capacity, int passengers) {
-        this.typeName = typeName;
-        this.topSpeed = topSpeed;
-        this.tankSize = tankSize;
-        this.capacity = capacity;
-        this.passengers = passengers;
+
+
+    public Bus(String type,String fuelType, String color) {
+        this.typeName = type;
+        this.fuelType = fuelType;
+        this.color = color;
 
     }
 
     @Override
     public void start() {
-        System.out.println("Bus " + typeName + " has started");
+        System.out.println( "Bus "+typeName + " has started");
     }
-
+    @Override
     public void stop() {
         System.out.println("Bus " + typeName + " has stopped");
     }
 
+    @Override
     public void getInfo() {
-        System.out.println("Bus " + typeName + " capasity" + capacity +
-                "passengers" + passengers + " top speed" + topSpeed + " tank size" + tankSize
-        );
+        System.out.println("Bus information:");
+        System.out.println("Type: " + typeName);
+        System.out.println("Color: " + color);
+        System.out.println("Fuel Type: " + fuelType);
+
+
 
     }
 }
