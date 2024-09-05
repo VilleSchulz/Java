@@ -22,6 +22,8 @@ public class Car implements Vehicle {
 
 
     public void getInfo() {
+        System.out.println("Car " + typeName +
+                 " top speed" + topSpeed + " tank size" + tankSize);
 
     }
 }

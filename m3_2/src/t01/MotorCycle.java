@@ -21,6 +21,7 @@ public class MotorCycle implements Vehicle {
         System.out.println("Motorcycle " + typeName + " is stopped.");
     }
     public void getInfo(){
+        System.out.println("Motorcycle " + typeName +" top speed "+ topSpeed + " tank size " + tankSize);
 
     }
 }

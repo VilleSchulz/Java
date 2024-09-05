@@ -15,14 +15,20 @@ public class Bus implements Vehicle {
         this.passengers = passengers;
 
     }
+
     @Override
-    public void start(){
+    public void start() {
         System.out.println("Bus " + typeName + " has started");
     }
-    public void stop(){
+
+    public void stop() {
         System.out.println("Bus " + typeName + " has stopped");
     }
-    public void getInfo(){
+
+    public void getInfo() {
+        System.out.println("Bus " + typeName + " capasity" + capacity +
+                "passengers" + passengers + " top speed" + topSpeed + " tank size" + tankSize
+        );
 
     }
 }
