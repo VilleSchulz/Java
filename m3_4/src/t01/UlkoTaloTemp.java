@@ -14,7 +14,7 @@ public class UlkoTaloTemp {
         String[] columnNames = new String[0];
         String[] columns = new String[0];
         int counter = 0;
-        double averageTemp = 0;
+        double tempSum = 0;
         boolean header = true;
         try {
             file = new FileReader(FILENAME);
@@ -30,19 +30,16 @@ public class UlkoTaloTemp {
                     } else {
                         columns = line.split(";");
                         for (int i = 0; i < 2; i++) {
-                            if (columns[0].startsWith(DAY)) {
-                                if (columns[i].startsWith(DAY) || columnNames[i].startsWith(LOCATION)) {
-                                    System.out.print(columnNames[i] + " " + columns[i]+ " ");
-                                    if (i==1){
-                                        // Replace comma with dot before parsing
-                                        String tempString = columns[i].replace(",", ".");
-                                        averageTemp += Double.parseDouble(tempString);
-                                        counter ++;
-                                        System.out.println();
-                                    }
+                            if (columns[0].startsWith(DAY)) {// if the day is right, start checking if location is right
+                                System.out.print(columnNames[i] + " " + columns[i] + " ");
+                                if (columnNames[i].startsWith(LOCATION)) { //if in temp column->
+                                    String tempString = columns[i].replace(",", ".");// Replace comma with dot before parsing
+                                    tempSum += Double.parseDouble(tempString);//add parsed double (1.1 instead of 1,1) to temps
+                                    counter++;//counter for temps
+                                    System.out.println();//line change
                                 }
                             } else {
-                                break;
+                                break;//this prevents from handling irrelevant days
                             }
 
 
@@ -66,7 +63,7 @@ public class UlkoTaloTemp {
             } catch (Exception e) {
                 System.out.println("Error closing the file" + FILENAME);
             }
-            System.out.printf("Average temp of %s is : %.2f",LOCATION,averageTemp/(double)counter);
+            System.out.printf("Average temp of %s is : %.2f", LOCATION, tempSum / (double) counter);// prints average temp
         }
 
     }
