@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Library {
     private List<Book> books = new ArrayList<>();
-    private static List<LibararyMember> libraryMembers = new ArrayList<>();
+    private static final List<LibararyMember> libraryMembers = new ArrayList<>();
 
 
     public void addBook(Book book) {
@@ -88,6 +88,7 @@ public class Library {
         for (Book book : books) {
             if (book.getTitle().equals(title)) {
                 bookFound = true;
+                break;
             }
         }
         return bookFound;
