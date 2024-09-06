@@ -2,7 +2,7 @@ package t03_library;
 
 
 import t03_library.library.model.Book;
-import t03_library.library.model.LibararyMember;
+import t03_library.library.model.LibraryMember;
 import t03_library.library.system.Library;
 
 public class Main {
@@ -15,17 +15,19 @@ public class Main {
         library.addBook(book2);
         library.addBook(book3);
 
-        LibararyMember libararyMember1 = new LibararyMember("Jari", 1);
-        LibararyMember libararyMember2 = new LibararyMember("Jari2", 2);
-        LibararyMember libararyMember3 = new LibararyMember("Jari3", 3);
-        library.addMember(libararyMember1);
-        library.addMember(libararyMember2);
-        library.addMember(libararyMember3);
-        library.reserveBook(libararyMember1,book1);
-        library.reserveBook(libararyMember1, book2);
-        library.reserveBook(libararyMember2, book2);
-        library.cancelReserverdBook(libararyMember1, book2);
-        library.reserveBook(libararyMember2,book2);
+
+        LibraryMember libaryMember1 = new LibraryMember("Jari", 1);
+        LibraryMember libraryMember2 = new LibraryMember("Jari2", 2);
+        LibraryMember libraryMember3 = new LibraryMember("Jari3", 3);
+        library.addMember(libaryMember1);
+        library.addMember(libraryMember2);
+        library.addMember(libraryMember3);
+        library.reserveBook(libaryMember1,book1);
+        library.reserveBook(libaryMember1, book2);
+        library.reserveBook(libraryMember2, book2);
+        libaryMember1.displayReservedBooks();
+        library.cancelReserverdBook(libaryMember1, book2);
+        library.reserveBook(libraryMember2,book2);
 
 
     }

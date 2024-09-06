@@ -1,26 +1,26 @@
 package t03_library.library.system;
 
 import t03_library.library.model.Book;
-import t03_library.library.model.LibararyMember;
+import t03_library.library.model.LibraryMember;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Library {
     private List<Book> books = new ArrayList<>();
-    private static final List<LibararyMember> libraryMembers = new ArrayList<>();
+    private static final List<LibraryMember> libraryMembers = new ArrayList<>();
 
 
     public void addBook(Book book) {
         books.add(book);
     }
 
-    public static void addMember(LibararyMember member) {
+    public static void addMember(LibraryMember member) {
         libraryMembers.add(member);
         System.out.println(member.getName() + " has been added to the library");
     }
 
-    public void borrowBook(String title, LibararyMember member) {
+    public void borrowBook(String title, LibraryMember member) {
         boolean bookFound = false;
         for (int i = 0; i < books.size(); i++) {
             if (books.get(i).getTitle().equals(title)) {
@@ -36,7 +36,7 @@ public class Library {
         }
     }
 
-    public void reserveBook(LibararyMember member, Book book) {
+    public void reserveBook(LibraryMember member, Book book) {
         if (!book.isReserved()) {
             book.setReserved(true);
             member.addReservedBook(book);
@@ -48,11 +48,11 @@ public class Library {
         }
     }
 
-    public void cancelReserverdBook(LibararyMember member, Book book) {
+    public void cancelReserverdBook(LibraryMember member, Book book) {
         if (book.isReserved() && member.hasReservedBook(book)) {
             book.setReserved(false);
             member.removeReservedBook(book);
-            System.out.println(book.getTitle() + " reservation cancelled succesfully");
+            System.out.println(member.getName() +": "+ book.getTitle() + " reservation cancelled succesfully");
 
 
         } else {
@@ -61,7 +61,7 @@ public class Library {
 
 
     }
-    public void displayReservedBooks(LibararyMember member) {
+    public void displayReservedBooks(LibraryMember member) {
         System.out.println("Reserved books of " + member.getName());
         for(Book book : member.getReservedBooks()) {
             System.out.println(book.getTitle());
@@ -70,7 +70,7 @@ public class Library {
 
     }
 
-    public void returnBook(String title, LibararyMember member) {
+    public void returnBook(String title, LibraryMember member) {
         for (int i = 0; i < member.getBorrowedBooks().size(); i++) {
             if (member.getBorrowedBooks().get(i).getTitle().equals(title)) {
                 books.add(member.getBorrowedBooks().get(i));
