@@ -28,7 +28,7 @@ public class Fibonachi {
                 System.out.println(num1 + " ");
 
                 // Swap
-               BigInteger num3 = num1.add(num2);
+               BigInteger num3 = num1.add(num2);// same as num 1+ num 2
                  num1 = num2;
                  num2 = num3;
             }
