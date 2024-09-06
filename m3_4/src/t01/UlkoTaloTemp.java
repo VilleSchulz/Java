@@ -1,3 +1,9 @@
+//Task 1: Read a CSV file from the network location
+//
+//There is a network file (https://users.metropolia.fi/~jarkkov/temploki.csv) where we have periodical temperature
+// measurements at 10 minutes interval. Create an application which reads the file, reads the 'UlkoTalo' column, and
+// calculates the average temperature for the 1st day of January 2023.
+
 package t01;
 
 import java.io.*;
