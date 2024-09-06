@@ -12,7 +12,7 @@ public class UlkoTaloTemp {
         BufferedReader bufferedstream = null;
         String line;
         String[] columnNames = new String[0];
-        String[] columns = new String[0];
+        String[] columns;
         int counter = 0;
         double tempSum = 0;
         boolean header = true;
