@@ -1,24 +1,24 @@
 package t03_library.library.model;
 
 public class Book {
-    private String title;
-    private String author;
-    private int ISBN;
+    private final String TITLE;
+    private final String AUTHOR;
+    private final int ISBN;
     private int publicationYear;
     private boolean reserved = false;
 
     public Book(String title, String author, int ISBN) {
-        this.title = title;
-        this.author = author;
+        this.TITLE = title;
+        this.AUTHOR = author;
         this.ISBN = ISBN;
     }
 
     public String getTitle() {
-        return title;
+        return TITLE;
     }
 
     public String getAuthor() {
-        return author;
+        return AUTHOR;
     }
 
     public int getISBN() {

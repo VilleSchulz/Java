@@ -19,9 +19,9 @@ public class Main {
         LibraryMember libaryMember1 = new LibraryMember("Jari", 1);
         LibraryMember libraryMember2 = new LibraryMember("Jari2", 2);
         LibraryMember libraryMember3 = new LibraryMember("Jari3", 3);
-        library.addMember(libaryMember1);
-        library.addMember(libraryMember2);
-        library.addMember(libraryMember3);
+        Library.addMember(libaryMember1);
+        Library.addMember(libraryMember2);
+        Library.addMember(libraryMember3);
         library.reserveBook(libaryMember1,book1);
         library.reserveBook(libaryMember1, book2);
         library.reserveBook(libraryMember2, book2);
