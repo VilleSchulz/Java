@@ -1,14 +1,8 @@
-package t01;
+package t03;
 
-public class MotorCycle implements Vehicle {
-    private String typeName;
-    private String color;
-    private String fuelType;
-
-    public MotorCycle(String type,String fuelType, String color ) {
-        this.typeName = type;
-        this.fuelType = fuelType;
-        this.color = color;
+public class MotorCycle extends AbstractVehicle {
+    public MotorCycle(String type, String fuelType, String color ) {
+        super(type,fuelType,color);
 
     }
     @Override
@@ -25,5 +19,9 @@ public class MotorCycle implements Vehicle {
         System.out.println("Type: " + typeName);
         System.out.println("Color: " + color);
         System.out.println("Fuel type: " + fuelType);
+    }
+    @Override
+    public void charge(){
+        System.out.println("Cannot charge motorcycle "+ typeName);
     }
 }

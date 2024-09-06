@@ -1,16 +1,11 @@
-package t01;
+package t03;
 
-public class Bus implements Vehicle {
-    private String typeName;
-    private String color;
-    private String fuelType;
+public class Bus extends AbstractVehicle {
+
+    public Bus(String type, String fuelType, String color) {
+        super(type,fuelType,color);
 
 
-
-    public Bus(String type,String fuelType, String color) {
-        this.typeName = type;
-        this.fuelType = fuelType;
-        this.color = color;
 
     }
 
@@ -32,5 +27,9 @@ public class Bus implements Vehicle {
 
 
 
+    }
+    @Override
+    public void charge(){
+        System.out.println("Cannot charge bus "+ typeName);
     }
 }

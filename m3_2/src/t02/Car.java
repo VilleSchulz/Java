@@ -1,14 +1,8 @@
-package t01;
+package t02;
 
-public class Car implements Vehicle {
-    private String typeName;
-    private String color;
-    private String fuelType;
-
+public class Car extends AbstractVehicle {
     public Car(String type, String fuelType, String color) {
-        this.typeName = type;
-        this.fuelType = fuelType;
-        this.color = color;
+        super(type,fuelType,color);
     }
         @Override
         public void start () {

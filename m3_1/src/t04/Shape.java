@@ -1,6 +1,7 @@
 package t04;
 
-public class Shape {
+abstract class Shape {
+
     public double height;
     String color;
 
