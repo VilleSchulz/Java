@@ -1,6 +1,6 @@
-package t01;
+package t02;
 
-public class Bus_t02 extends t01.Car_t01 {
+public class Bus_t02 extends t02.Car_t02 {
     private int passengers;
     private int capacity;
 
