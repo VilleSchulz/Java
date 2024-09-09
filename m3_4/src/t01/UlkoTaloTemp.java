@@ -7,12 +7,12 @@
 package t01;
 
 import java.io.*;
+import java.util.HashMap;
 
 public class UlkoTaloTemp {
     private final static String FILENAME = "temploki.csv";
     private final static String DAY = "01.01.2023";
     private final static String LOCATION = "UlkoTalo";
-
     public static void main(String[] args) {
         FileReader file;
         BufferedReader bufferedstream = null;
