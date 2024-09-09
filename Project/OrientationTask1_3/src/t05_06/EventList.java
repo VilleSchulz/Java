@@ -5,6 +5,7 @@ import java.util.PriorityQueue;
 
 public class EventList {
     static PriorityQueue<Event> eventQueue= new PriorityQueue<>();
+
     public static void addToEventList(Event event){
         eventQueue.add(event);
 

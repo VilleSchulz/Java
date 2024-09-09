@@ -13,7 +13,7 @@ public class Main_t06 {
 
         eventList.printEventList();//print evenlist in priority order
         ArrivalProcess arrivalProcess = new ArrivalProcess();
-        //arrivalProcess.addEvent();
+        arrivalProcess.addEvent(eventList);
         eventList.printEventList();
 
 

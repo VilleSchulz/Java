@@ -10,7 +10,7 @@ package bank_t01;
 
 public class BankAccount {
     static int numbetOfAccounts;
-    private int accountNumber;
+    private final int accountNumber;
     private double balance;
 
     public BankAccount(int accountNumber, double StartBalance) {

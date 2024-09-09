@@ -17,7 +17,7 @@ public class Library {
 
     public static void addUser(LibararyMember user) {
         libraryMembers.add(user);
-        System.out.println(user.getName() + " has been added to the library");
+        System.out.println(user.getNAME() + " has been added to the library");
     }
 
     public void borrowBook(String title, LibararyMember user) {
@@ -26,7 +26,7 @@ public class Library {
             if (books.get(i).getTitle().equals(title)) {
                 user.borrowedBooks.add(books.get(i));
                 books.remove(books.get(i));
-                System.out.println(user.getName() + " borrowed " + title);
+                System.out.println(user.getNAME() + " borrowed " + title);
                 bookFound = true;
             }
 
@@ -42,7 +42,7 @@ public class Library {
             if (user.borrowedBooks.get(i).getTitle().equals(title)) {
                 books.add(user.borrowedBooks.get(i));
                 user.borrowedBooks.remove(user.borrowedBooks.get(i));
-                System.out.println(user.getName() + " returned " + title);
+                System.out.println(user.getNAME() + " returned " + title);
 
             }
         }

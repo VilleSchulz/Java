@@ -13,7 +13,7 @@ public class Main_t3 {
 
         Event event1 = new Event(9,EventType.ARRIVAL,eventList);
         Event event2 = new Event(1,EventType.ARRIVAL,eventList);
-        Event event3 = new Event(3,EventType.EXIT,eventList);
+        Event event3 = new Event(3,EventType.FINNIST,eventList);
 
         eventList.printEventList();//print evenlist in priority order
     }
