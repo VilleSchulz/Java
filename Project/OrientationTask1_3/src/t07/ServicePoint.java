@@ -29,7 +29,6 @@ public class ServicePoint {
             int customerId = queue.getLast().getId();
             if (queue.size() == 1) {
                 serviceTime = queue.getLast().getStartTime();// prenvents from running out of index
-                clock.setTime(startTime);
             } else {
                 serviceTime = queue.get(queue.size() - 2).getStartTime() - queue.getLast().getStartTime();// get service start time from next customer to calculate total servicetime
                 clock.setTime(queue.get(queue.size() - 2).getStartTime());// set clock time to next customers start time
@@ -43,9 +42,9 @@ public class ServicePoint {
 
 
             System.out.println("Customer " + customerId);
-            System.out.println("Wait time: " + (int) waitTime + "s");
-            System.out.println("Service time: " + serviceTime + "s");
-            System.out.println("Total time: " + (int) (waitTime + serviceTime) + "s\n\n\n\n");
+            System.out.println("Wait time: " + (int) waitTime + "m");
+            System.out.println("Service time: " + serviceTime + "m");
+            System.out.println("Total time: " + (int) (waitTime + serviceTime) + "m\n\n\n\n");
             totalServiceTime += (int) serviceTime;
             //System.out.println("Total service time: " + totalServiceTime + "s");
             counter++;
@@ -53,7 +52,7 @@ public class ServicePoint {
             waitTime += serviceTime;
         }
         System.out.println("No more customers");
-        System.out.println("Average serve time is " + totalServiceTime / counter + "s");
+        System.out.println("Average serve time is " + totalServiceTime / counter + "m");
 
 
     }
