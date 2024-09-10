@@ -1,7 +1,5 @@
-package t05_06;
+package t06;
 
-
-import java.util.PriorityQueue;
 
 public class Event implements Comparable<Event> {
     private int eventTime;

@@ -1,4 +1,4 @@
-package t05_06;
+package t06;
 
 
 import java.util.PriorityQueue;
@@ -11,9 +11,10 @@ public class EventList {
 
     }
     public void printEventList(){
-    while(!eventQueue.isEmpty()){
-        Event event = eventQueue.poll();// poll events from Priority Queue
+        for(Event event : eventQueue){
+        //Event event = eventQueue.poll();// poll events from Priority Queue
         System.out.println("event: "+ event.getEventType()+"  event time: "+event.getEventTime());
     }
+
     }
 }

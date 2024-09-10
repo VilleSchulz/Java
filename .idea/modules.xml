@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/4.1/4.1.iml" filepath="$PROJECT_DIR$/4.1/4.1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java.iml" filepath="$PROJECT_DIR$/Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Project/OrientationExanmple/OrientationExanmple.iml" filepath="$PROJECT_DIR$/Project/OrientationExanmple/OrientationExanmple.iml" />
       <module fileurl="file://$PROJECT_DIR$/Project/OrientationTask1_1/OrientationTask1_1.iml" filepath="$PROJECT_DIR$/Project/OrientationTask1_1/OrientationTask1_1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Project/OrientationTask1_2/OrientationTask1_2.iml" filepath="$PROJECT_DIR$/Project/OrientationTask1_2/OrientationTask1_2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Project/OrientationTask1_3/OrientationTask1_3.iml" filepath="$PROJECT_DIR$/Project/OrientationTask1_3/OrientationTask1_3.iml" />
