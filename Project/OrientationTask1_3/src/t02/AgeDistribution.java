@@ -17,6 +17,7 @@ public class AgeDistribution {
                 {100,MAXAGE}, 	// 2 %	  	// This line matches to random numbers 99 ja 100
         };
 
+
         int generatedAges[] = new int[MAXAGE+1];
 
         // Generate ages according to the distribution:
