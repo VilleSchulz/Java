@@ -5,16 +5,16 @@ public class AgeDistribution {
         final int MAXAGE = 40;
 
         int agedistribution[][] = {
-                {16, 20},  		// 16 %		// This line matches to random numbers 1..16,  gives age 20
-                {34, 21},  		// 18 %    	// This line matches to random numbers 17..34, gives age 21
-                {52, 22},		// 18 %    	// ...
-                {68, 23},    	// 16 %
-                {82, 24},  		// 14 %
-                {92, 27}, 		// 10 %
-                {96, 29},  		// 4 %
-                {98, 30},		// 2 %
-                {99, 33},  		// 1 %
-                {100,MAXAGE}, 	// 2 %	  	// This line matches to random numbers 99 ja 100
+                {8, 20},  		// 8 %		// This line matches to random numbers 1..16,  gives age 20
+                {16, 21},  		// 8 %    	// This line matches to random numbers 17..34, gives age 21
+                {26, 22},		// 10 %    	// ...
+                {38, 23},    	// 12 %
+                {50, 24},  		// 12 %
+                {65, 27}, 		// 15 %
+                {75, 29},  		// 10 %
+                {90, 30},		// 15 %
+                {95, 33},  		// 5 %
+                {100,MAXAGE}, 	// 5 %	  	// This line matches to random numbers 99 ja 100
         };
 
 
