@@ -1,8 +1,8 @@
-package t05_06;
+package t07;
 
 public class Clock {
     private static Clock instance;
-    long time = System.nanoTime();
+    int time = 0;
     private Clock() {
 
 
@@ -17,7 +17,7 @@ public class Clock {
         this.time = time;
 
     }
-    public  long getTime() {
+    public  int getTime() {
         return  this.time;
     }
 
