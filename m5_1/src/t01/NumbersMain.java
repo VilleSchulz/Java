@@ -25,7 +25,8 @@ class NumbersOdd implements Runnable {
             return;
         }
         oddReady = true;//change the boolean to true when the odd number printing is done
-        if (NumbersEven.evenReady) {//print this when both the odd and even numbers are printed
+        //print this when both the odd and even numbers are printed, this prevents the message from printing before all the numbers are printed
+        if (NumbersEven.evenReady) {
             System.out.println("Printing compeleted");
         }
 
@@ -55,7 +56,9 @@ class NumbersEven implements Runnable {
             return;
         }
         evenReady = true;//change the boolean to true when the even number printing is done
-        if (NumbersOdd.oddReady) {//print this when both the odd and even numbers are printed
+
+        //print this when both the odd and even numbers are printed, this prevents the message from printing before all the numbers are printed
+        if (NumbersOdd.oddReady) {
             System.out.println("Printing compeleted");
         }
     }
