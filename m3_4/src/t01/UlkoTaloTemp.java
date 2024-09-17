@@ -7,8 +7,6 @@
 package t01;
 
 import java.io.*;
-import java.util.HashMap;
-
 public class UlkoTaloTemp {
     private final static String FILENAME = "temploki.csv";
     private final static String DAY = "01.01.2023";
