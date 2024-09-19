@@ -1,10 +1,11 @@
-package t01;
+package t01_t02;
 
 public class Ticket {
     private static int  count= 1;
     private int id;
     public Ticket(){
-        id = count++;
+        id = count;
+        count++;
 
 
     }

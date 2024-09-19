@@ -1,4 +1,4 @@
-package t01;
+package t01_t02;
 
 import java.util.Random;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -23,9 +23,9 @@ public class Customer implements Runnable {
         int ticketsReserved = 0;
         synchronized (ticketList){
         for(int i = 0 ; i<ammount;i++) {
-            if (!ticketList.isEmpty()) {
-                Ticket ticket = ticketList.remove(0);
-                customersTickets.add(ticket);
+            if (!ticketList.isEmpty()) {//check if there are tickets left
+                Ticket ticket = ticketList.remove(0);//delete ticket from list
+                customersTickets.add(ticket);//add ticket to customers ticket list
                 System.out.println("Customer " + id + " reserved ticket id: " + ticket.getId());
                 ticketsReserved++;//add one to customers reserved ticket count
 
