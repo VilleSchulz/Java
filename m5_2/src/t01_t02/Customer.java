@@ -23,7 +23,7 @@ public class Customer implements Runnable {
         int ticketsReserved = 0;
         synchronized (ticketList){
         for(int i = 0 ; i<ammount;i++) {
-            if (!ticketList.isEmpty()) {//check if there are tickets left
+            if (!ticketList.isEmpty()) {//check if there are tickets left. if customer tries to reserve more tickets than there are left, the customer will only reserve the tickets that are left
                 Ticket ticket = ticketList.remove(0);//delete ticket from list
                 customersTickets.add(ticket);//add ticket to customers ticket list
                 System.out.println("Customer " + id + " reserved ticket id: " + ticket.getId());
@@ -32,6 +32,7 @@ public class Customer implements Runnable {
             } else {
                 System.out.println("Customer " + id + " tried to reserve " + ammount +
                         " tickets but couldn´t reserve " + (ammount - ticketsReserved) + " tickets");
+                break;
             }
 
         }
